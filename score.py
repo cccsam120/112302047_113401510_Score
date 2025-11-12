@@ -10,7 +10,16 @@ Original file is located at
 a = input().split()
 b = [int(x) for x in a]
 count=0
+max=b[0]
+min=b[0]
 for i in range (0,len(b)):
   if b[i]<60:
     count=count+1
+
+  if b[i]>max:
+    max=b[i]
+  if b[i]<min:
+    min=b[i]
+
 print(count)
+print(f"max={max} min={min}")
